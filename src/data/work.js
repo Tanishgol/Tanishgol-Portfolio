@@ -1,5 +1,6 @@
 import Project1 from "../Assets/Project-1.png";
 import Project2 from "../Assets/Project-2.jpeg";
+import Project3 from "../Assets/Project-3.png";
 
 export const workData = {
   sectionId: "work",
@@ -37,5 +38,19 @@ export const workData = {
       { label: "AJAX", color: "#007BFF", text: "white" },
     ],
     link: "https://github.com/Tanishgol/Expense-Manager",
+  },
+  project3: {
+    image: Project3,
+    imageAlt: "Project 3 Screenshot",
+    title: "Restaurant Reservation System",
+    description: "A web application for managing restaurant reservations.",
+    badges: [
+      { label: "HTML", color: "#E44D26", text: "white" },
+      { label: "CSS", color: "#2965F1", text: "white" },
+      { label: "JavaScript", color: "#F7DF1E", text: "black" },
+      { label: "Bootstrap", color: "#7952B3", text: "white" },
+      { label: "jsPDF", color: "#D32F2F", text: "white" },
+    ],
+    link: "https://github.com/Tanishgol/Restaurant-Management-System",
   },
 };

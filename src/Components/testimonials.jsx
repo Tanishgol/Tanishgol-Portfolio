@@ -13,28 +13,33 @@ const Testimonials = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-1 justify-items-center">
-                    <div className="h-full w-full max-w-sm">
-                        <div className="flex h-full flex-col rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-white/5 dark:shadow-none">
-                            <img
-                                src={testimonialsData.testimonial.avatar}
-                                className="mx-auto mb-4 h-[100px] w-[100px] rounded-full object-cover"
-                                loading="lazy"
-                                alt={testimonialsData.testimonial.avatarAlt}
-                            />
-                            <blockquote className="mb-4 text-gray-700 dark:text-gray-300">
-                                <p className="leading-relaxed">
-                                    "{testimonialsData.testimonial.quote}"
+                <div className="grid grid-cols-3 gap-6 justify-items-center">
+                    {testimonialsData.testimonials.map((testimonial, index) => (
+                        <div key={index} className="h-full w-full max-w-sm">
+                            <div className="flex h-full flex-col rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-white/5 dark:shadow-none">
+                                <img
+                                    src={testimonial.avatar}
+                                    className="mx-auto mb-4 h-[100px] w-[100px] rounded-full object-cover"
+                                    loading="lazy"
+                                    alt={testimonial.avatarAlt}
+                                />
+
+                                <blockquote className="mb-4 text-gray-700 dark:text-gray-300">
+                                    <p className="leading-relaxed">
+                                        "{testimonial.quote}"
+                                    </p>
+                                </blockquote>
+
+                                <h5 className="text-lg font-bold text-gray-900 dark:text-white">
+                                    {testimonial.name}
+                                </h5>
+
+                                <p className="mt-1 text-gray-500 dark:text-gray-400">
+                                    {testimonial.role}
                                 </p>
-                            </blockquote>
-                            <h5 className="text-lg font-bold text-gray-900 dark:text-white">
-                                {testimonialsData.testimonial.name}
-                            </h5>
-                            <p className="mt-1 text-gray-500 dark:text-gray-400">
-                                {testimonialsData.testimonial.role}
-                            </p>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
