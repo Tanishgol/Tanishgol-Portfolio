@@ -1,0 +1,48 @@
+@keyframes flipPin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-pin {
+  display: inline-flex;
+  animation: flipPin 1.6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.Dev-image-right {
+  box-shadow: 20px 20px 10px 8px rgb(121, 121, 121);
+}
+
+@media (max-width: 991px) {
+  .custom-flex {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 25px;
+  }
+
+  .image-column {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-flex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .text-column {
+    order: 1;
+  }
+
+  .image-column {
+    order: 2;
+  }
+}
