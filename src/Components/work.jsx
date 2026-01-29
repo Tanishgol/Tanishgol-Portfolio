@@ -60,7 +60,7 @@ const Work = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col items-center gap-6 rounded-2xl bg-gray-50 p-6 shadow-md dark:bg-white/5 lg:flex-row">
+                <div className="mb-12 flex flex-col items-center gap-6 rounded-2xl bg-gray-50 p-6 shadow-md dark:bg-white/5 lg:flex-row">
                     <div className="w-full lg:order-2 lg:w-6/12">
                         <img
                             src={workData.project2.image}
