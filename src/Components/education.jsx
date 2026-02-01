@@ -16,7 +16,7 @@ const Education = () => {
                     {educationData.educationList.map((edu, index) => (
                         <div key={index} className="flex flex-col gap-6 rounded-xl border border-gray-200 bg-gray-50 px-6 py-8 shadow-sm dark:border-gray-700 dark:bg-white/5 md:flex-row">
                             <div className="flex w-full items-center justify-center md:w-2/12">
-                                <div className="flex items-center justify-center bg-white dark:bg-slate-800 p-2 rounded-md">
+                                <div className="flex items-center justify-center bg-white dark:bg-slate-500 p-2 rounded-md">
                                     <img
                                         src={edu.logo}
                                         alt={edu.logoAlt}

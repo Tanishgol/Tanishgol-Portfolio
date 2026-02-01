@@ -18,14 +18,17 @@ const Experience = () => {
                     </h2>
                 </div>
                 <div className="flex flex-col items-center gap-6 rounded-xl border border-gray-200 bg-gray-50 px-4 py-10 shadow-sm dark:border-gray-700 dark:bg-white/5 md:flex-row md:items-center md:px-6">
-                    <div className="w-full text-center md:w-3/12">
-                        <img
-                            src={experienceData.company.logo}
-                            alt={experienceData.company.logoAlt}
-                            className="mx-auto max-h-[90px] w-auto dark:brightness-0 dark:invert"
-                            loading="lazy"
-                        />
+                    <div className="w-full md:w-3/12 flex items-center justify-center">
+                        <div className="flex items-center justify-center bg-white dark:bg-slate-500 p-2 rounded-md">
+                            <img
+                                src={experienceData.company.logo}
+                                alt={experienceData.company.logoAlt}
+                                className="max-h-[90px] w-auto"
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
+
                     <div className="w-full md:w-6/12">
                         <h3 className="mb-4 text-center text-xl font-bold text-gray-900 dark:text-white">
                             {experienceData.role}

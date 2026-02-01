@@ -75,13 +75,13 @@ const Devinfo = () => {
 
                     <div className="flex items-center justify-center md:order-last md:flex-grow lg:justify-end">
                         <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
-                            <div className="absolute z-0 h-[280px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]" />
+                            <div className="absolute z-0 h-[280px] w-[280px] border-8 border-transparent bg-gray-300/95 dark:bg-gray-700/65 max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]" />
 
                             <img
                                 alt={devInfoData.image.alt}
                                 loading="lazy"
                                 decoding="async"
-                                className="absolute z-10 h-[280px] w-[240px] border-8 border-gray-400/65 dark:border-black max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px] object-cover"
+                                className="absolute z-10 h-[280px] w-[240px] border-8 border-white dark:border-black max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px] object-cover"
                                 src={devInfoData.image.src}
                             />
                         </div>
