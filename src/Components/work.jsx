@@ -3,7 +3,7 @@ import { workData } from "../data/work";
 
 const Work = () => {
     return (
-        <section id={workData.sectionId} className="bg-white py-16 dark:bg-black">
+        <section id={workData.sectionId} className="bg-gray-100 py-16 dark:bg-slate-900">
             <div className="mx-auto max-w-6xl px-4">
                 <div className="mb-12 text-center">
                     <button className="mt-10 rounded-lg bg-gray-700 px-6 py-3 text-lg font-semibold text-white shadow-sm transition hover:bg-gray-800 dark:bg-gray-200 dark:text-black dark:hover:bg-white">

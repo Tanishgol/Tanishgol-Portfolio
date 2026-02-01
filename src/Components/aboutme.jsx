@@ -4,29 +4,18 @@ import { aboutData } from "../data/about";
 
 const Aboutme = () => {
     return (
-        <section
-            id={aboutData.sectionId}
-            className="bg-gray-100 py-16 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800"
-        >
+        <section id={aboutData.sectionId} className="bg-gray-100 py-16 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800">
             <div className="mx-auto max-w-6xl px-4">
                 <div className="text-center">
-                    <button
-                        type="button"
-                        className="mt-10 rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-md transition hover:bg-blue-500
-                        dark:bg-blue-500 dark:text-slate-900 dark:hover:bg-blue-400"
-                    >
+                    <button type="button" className="mt-10 rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-md transition hover:bg-blue-500
+                        dark:bg-blue-500 dark:text-slate-900 dark:hover:bg-blue-400">
                         {aboutData.title}
                     </button>
                 </div>
 
                 <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:gap-12">
                     <div className="mx-auto flex w-full justify-center lg:w-6/12">
-                        <img
-                            className="w-[280px] sm:w-[460px] rounded-xl object-cover shadow-lg dark:shadow-blue-500/10"
-                            loading="lazy"
-                            src={aboutData.image.src}
-                            alt={aboutData.image.alt}
-                        />
+                        <img className="w-[280px] sm:w-[460px] rounded-xl object-cover shadow-lg dark:shadow-blue-500/10" loading="lazy" src={aboutData.image.src} alt={aboutData.image.alt} />
                     </div>
 
                     <div className="flex w-full flex-col justify-center lg:w-6/12">

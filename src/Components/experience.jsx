@@ -3,7 +3,7 @@ import { experienceData } from "../data/experience";
 
 const Experience = () => {
     return (
-        <section className="bg-gray-100 py-16 dark:bg-slate-900">
+        <section className="py-16 dark:bg-black">
             <div className="mx-auto max-w-6xl px-4">
                 <div className="mb-10 text-center">
                     <button

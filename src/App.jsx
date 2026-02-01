@@ -1,12 +1,13 @@
 import Navbar from "./Components/navbar";
-import Footer from "./Components/footer";
-import Work from "./Components/work";
-import Testimonials from "./Components/testimonials";
+import Devinfo from "./Components/devinfo";
 import Aboutme from "./Components/aboutme";
 import Skills from "./Components/skills";
+import Education from "./Components/education";
 import Experience from "./Components/experience";
-import Devinfo from "./Components/devinfo";
+import Work from "./Components/work";
+import Testimonials from "./Components/testimonials";
 import Getintouch from "./Components/Getintouch";
+import Footer from "./Components/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Devinfo />
       <Aboutme />
       <Skills />
+      <Education />
       <Experience />
       <Work />
       <Testimonials />

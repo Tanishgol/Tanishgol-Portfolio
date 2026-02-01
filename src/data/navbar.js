@@ -6,6 +6,7 @@ export const navbarData = {
 
   navItems: [
     { id: "about", label: "About" },
+    { id: "education", label: "Education" },
     { id: "work", label: "Work" },
     { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },

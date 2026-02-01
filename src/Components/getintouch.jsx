@@ -22,10 +22,10 @@ const Getintouch = () => {
             <Toaster position="top-right" reverseOrder={false} />
             <section
                 id={contactData.sectionId}
-                className="bg-white py-16 dark:bg-black"
+                className="relative overflow-hidden bg-gray-100 py-16 dark:bg-slate-900"
             >
                 <div className="mx-auto max-w-6xl px-4">
-                    <div className="p-8 text-center shadow-sm sm:p-10">
+                    <div className="p-8 text-center sm:p-10">
                         <button className="mb-4 rounded-lg bg-gray-700 px-6 py-3 text-lg font-semibold text-white shadow-sm transition hover:bg-gray-800 dark:bg-gray-200 dark:text-black dark:hover:bg-white">
                             {contactData.title}
                         </button>
@@ -33,8 +33,8 @@ const Getintouch = () => {
                         <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-500 dark:text-gray-400">
                             {contactData.description}
                         </p>
-                        <div className="mt-8 flex flex-col items-center">
-                            <div className="flex flex-wrap items-center justify-center gap-3">
+                        <div className="mt-8 flex justify-center">
+                            <div className="flex items-center gap-3 flex-wrap justify-center sm:flex-nowrap">
                                 <HiOutlineMail className="text-3xl text-gray-800 dark:text-gray-200" />
 
                                 <span className="break-all px-2 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
@@ -44,9 +44,7 @@ const Getintouch = () => {
                                 <button
                                     className="rounded-lg bg-gray-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 dark:bg-gray-200 dark:text-black dark:hover:bg-white"
                                     title="Copy to Clipboard"
-                                    onClick={() =>
-                                        copyToClipboard(contactData.email.address)
-                                    }
+                                    onClick={() => copyToClipboard(contactData.email.address)}
                                 >
                                     <FiCopy className="text-lg" />
                                 </button>
