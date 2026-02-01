@@ -1,6 +1,7 @@
 import React from "react";
 import { BounceLoader } from "react-spinners";
 import { IoLocationOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 import { devInfoData } from "../data/devinfo";
 import "../Styles/globle.css";
 
@@ -12,7 +13,17 @@ const Devinfo = () => {
                     <div className="w-full lg:w-8/12">
                         <h1 className="mb-4 text-center text-4xl font-bold text-gray-900 dark:text-white lg:text-left">
                             {devInfoData.heading.greeting} {devInfoData.heading.name}{" "}
-                            {devInfoData.heading.emoji}
+                            <motion.span
+                                style={{ display: "inline-block", transformOrigin: "70% 70%" }}
+                                animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                }}
+                            >
+                                {devInfoData.heading.emoji}
+                            </motion.span>
                         </h1>
 
                         <p className="mb-6 text-justify text-base leading-relaxed text-gray-700 dark:text-gray-300">
@@ -70,7 +81,7 @@ const Devinfo = () => {
                                 alt={devInfoData.image.alt}
                                 loading="lazy"
                                 decoding="async"
-                                className="absolute z-10 h-[280px] w-[240px] border-8 border-black max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px] object-cover"
+                                className="absolute z-10 h-[280px] w-[240px] border-8 border-gray-400/65 dark:border-black max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px] object-cover"
                                 src={devInfoData.image.src}
                             />
                         </div>

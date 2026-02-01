@@ -13,7 +13,7 @@ const Testimonials = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-3 gap-6 justify-items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 justify-items-center">
                     {testimonialsData.testimonials.map((testimonial, index) => (
                         <div key={index} className="h-full w-full max-w-sm">
                             <div className="flex h-full flex-col rounded-2xl bg-white p-6 text-center shadow-sm dark:bg-white/5 dark:shadow-none">
