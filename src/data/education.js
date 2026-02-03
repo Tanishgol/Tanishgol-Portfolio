@@ -8,7 +8,7 @@ export const educationData = {
     {
       degree: "Diploma in Computer Engineering",
       institution: "Marwadi University",
-      duration: "2022 – 2025",
+      duration: "August 2022 - May 2025",
       cgpa: "7.55 / 10",
       logo: Mu_logo,
       logoAlt: "Marwadi University Logo",
@@ -22,7 +22,7 @@ export const educationData = {
     {
       degree: "Bachelor of Cyber Security",
       institution: "RMIT University, Melbourne",
-      duration: "2026 – 2029 (Expected)",
+      duration: "March 2026 - December 2028",
       logo: RMIT_logo,
       logoAlt: "RMIT University Logo",
       points: [

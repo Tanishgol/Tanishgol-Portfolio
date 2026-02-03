@@ -17,57 +17,63 @@ const Experience = () => {
                         {experienceData.subtitle}
                     </h2>
                 </div>
-                <div className="flex flex-col items-center gap-6 rounded-xl border border-gray-200 bg-gray-50 px-4 py-10 shadow-sm dark:border-gray-700 dark:bg-white/5 md:flex-row md:items-center md:px-6">
-                    <div className="w-full md:w-3/12 flex items-center justify-center">
-                        <div className="flex items-center justify-center bg-white dark:bg-slate-500 p-2 rounded-md">
-                            <img
-                                src={experienceData.company.logo}
-                                alt={experienceData.company.logoAlt}
-                                className="max-h-[90px] w-auto"
-                                loading="lazy"
-                            />
+
+                {experienceData.experiences.map((exp, idx) => (
+                    <div
+                        key={idx}
+                        className="mb-6 flex flex-col items-center gap-6 rounded-xl border border-gray-200 bg-gray-50 px-4 py-10 shadow-sm dark:border-gray-700 dark:bg-white/5 md:flex-row md:px-6"
+                    >
+                        <div className="w-full md:w-3/12 flex justify-center">
+                            <div className="rounded-md bg-white p-2 dark:bg-slate-500">
+                                <img
+                                    src={exp.company.logo}
+                                    alt={exp.company.logoAlt}
+                                    className="max-h-[90px] w-auto"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="w-full md:w-6/12">
+                            <h3 className="mb-4 text-center text-xl font-bold text-gray-900 dark:text-white">
+                                {exp.role}
+                            </h3>
+
+                            <ul className="list-disc space-y-2 pl-6 text-gray-700 dark:text-gray-300">
+                                <li>{exp.points.p1}</li>
+
+                                <li>
+                                    {exp.points.p2.before}{" "}
+                                    {exp.points.p2.techStack.map((tech, index) => (
+                                        <span
+                                            key={tech}
+                                            className="font-semibold text-gray-900 dark:text-white"
+                                        >
+                                            {tech}
+                                            {index <
+                                                exp.points.p2.techStack.length - 1 && ", "}
+                                        </span>
+                                    ))}
+                                    {exp.points.p2.after}
+                                </li>
+
+                                <li>
+                                    {exp.points.p3.before}{" "}
+                                    <span className="font-semibold text-gray-900 dark:text-white">
+                                        {exp.points.p3.highlight}
+                                    </span>
+                                    {exp.points.p3.after}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="w-full text-center md:w-2/12 md:text-right">
+                            <p className="font-semibold text-gray-500 dark:text-gray-400">
+                                {exp.duration}
+                            </p>
                         </div>
                     </div>
-
-                    <div className="w-full md:w-6/12">
-                        <h3 className="mb-4 text-center text-xl font-bold text-gray-900 dark:text-white">
-                            {experienceData.role}
-                        </h3>
-
-                        <ul className="list-disc space-y-2 pl-6 text-gray-700 dark:text-gray-300">
-                            <li className="text-justify">
-                                {experienceData.points.p1}
-                            </li>
-
-                            <li className="text-justify">
-                                {experienceData.points.p2.before}{" "}
-                                {experienceData.points.p2.techStack.map((tech, index) => (
-                                    <span
-                                        key={tech}
-                                        className="font-semibold text-gray-900 dark:text-white"
-                                    >
-                                        {tech}
-                                        {index < experienceData.points.p2.techStack.length - 1 && ", "}
-                                    </span>
-                                ))}
-                                {experienceData.points.p2.after}
-                            </li>
-
-                            <li className="text-justify">
-                                {experienceData.points.p3.before}{" "}
-                                <span className="font-semibold text-gray-900 dark:text-white">
-                                    {experienceData.points.p3.highlight}
-                                </span>
-                                {experienceData.points.p3.after}
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="w-full text-center md:w-3/12 md:text-right">
-                        <p className="font-semibold text-gray-500 dark:text-gray-400">
-                            {experienceData.duration}
-                        </p>
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
     );
