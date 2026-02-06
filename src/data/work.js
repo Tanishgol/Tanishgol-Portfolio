@@ -42,15 +42,14 @@ export const workData = {
   project3: {
     image: Project3,
     imageAlt: "Project 3 Screenshot",
-    title: "Restaurant Reservation System",
-    description: "A web application for managing restaurant reservations.",
+    title: "Restaurant Management System",
+    description:
+      "An application for managing restaurant tables, orders, and bills with real-time analytics and featuring dynamic billing, sales history tracking, dark mode support, and full localStorage persistence.",
     badges: [
-      { label: "HTML", color: "#E44D26", text: "white" },
-      { label: "CSS", color: "#2965F1", text: "white" },
-      { label: "JavaScript", color: "#F7DF1E", text: "black" },
-      { label: "Bootstrap", color: "#7952B3", text: "white" },
-      { label: "jsPDF", color: "#D32F2F", text: "white" },
+        { label: "ReactJS", color: "#61DAFB", text: "black" },
+        { label: "TailwindCSS", color: "#38BDF8", text: "black" },
+        { label: "jsPDF", color: "#D32F2F", text: "white" },
     ],
-    link: "https://github.com/Tanishgol/Restaurant-Management-System",
+    link: "https://github.com/Tanishgol/RMS-static",
   },
 };
